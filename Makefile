@@ -475,7 +475,7 @@ ifeq ($(BACKEND),sdl)
     # Core Audio (Quicktime) base sound system routines
     SOURCES += sound/core-audio_sound.mm
     SOURCES += music/core-audio_midi.mm
-    LIBS    += -framework Foundation -framework QTKit
+    LIBS    += -framework Foundation -framework AVFoundation
   else
     SOURCES  += sound/sdl_sound.cc
     ifeq ($(findstring $(OSTYPE), cygwin mingw),)
@@ -506,7 +506,7 @@ ifeq ($(BACKEND),sdl2)
     # Core Audio (Quicktime) base sound system routines
     SOURCES += sound/core-audio_sound.mm
     SOURCES += music/core-audio_midi.mm
-    LIBS    += -framework Foundation -framework QTKit
+    LIBS    += -framework Foundation -framework AVFoundation
   else
     SOURCES  += sound/sdl_sound.cc
     ifeq ($(findstring $(OSTYPE), cygwin mingw),)
@@ -552,7 +552,7 @@ ifeq ($(BACKEND),opengl)
     # Core Audio (Quicktime) base sound system routines
     SOURCES += sound/core-audio_sound.mm
     SOURCES += music/core-audio_midi.mm
-    LIBS    += -framework Foundation -framework QTKit
+    LIBS    += -framework Foundation -framework AVFoundation
   else
     SOURCES  += sound/sdl_sound.cc
     ifeq ($(findstring $(OSTYPE), cygwin mingw),)
